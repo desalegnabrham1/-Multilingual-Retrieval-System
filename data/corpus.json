@@ -1,0 +1,215 @@
+{
+  "documents": [
+    {
+      "id": "en-1",
+      "title": "School Expansion in the Town",
+      "language": "en",
+      "source": "Synthetic educational news sample",
+      "text": "The school opened a new classroom for grade one students. Teachers introduced reading and mathematics lessons to support education in the town."
+    },
+    {
+      "id": "en-2",
+      "title": "Community Health Clinic Update",
+      "language": "en",
+      "source": "Synthetic health bulletin",
+      "text": "The clinic provides health care, medicine, and vaccination for mothers and children. Patients receive follow up from nurses and doctors."
+    },
+    {
+      "id": "en-3",
+      "title": "Electricity Service Improvement",
+      "language": "en",
+      "source": "Synthetic infrastructure note",
+      "text": "The town expanded electricity service and new power lines improved lighting in homes and shops. The repair team connected the grid to the market area."
+    },
+    {
+      "id": "en-4",
+      "title": "Road and Bridge Development",
+      "language": "en",
+      "source": "Synthetic transport report",
+      "text": "The government repaired the road and bridge to connect the market with nearby villages and transport routes. The project reduced travel time for traders."
+    },
+    {
+      "id": "en-5",
+      "title": "Farming and Irrigation Support",
+      "language": "en",
+      "source": "Synthetic agriculture article",
+      "text": "Farmers used irrigation and improved seeds to increase crop harvest during the dry season. The agriculture office trained farmers on soil care and storage."
+    },
+    {
+      "id": "am-1",
+      "title": "ትምህርት ቤት ማስፋፊያ",
+      "language": "am",
+      "source": "የትምህርት ምሳሌ",
+      "text": "ትምህርት ቤት አዲስ ክፍል ከፈተ። መምህር የንባብ እና የሂሳብ ትምህርት ጀመረ። ተማሪ ለትምህርት ተጨማሪ ድጋፍ አገኘ።"
+    },
+    {
+      "id": "am-2",
+      "title": "የጤና ክሊኒክ ማስታወቂያ",
+      "language": "am",
+      "source": "የጤና ምሳሌ",
+      "text": "ክሊኒክ የጤና አገልግሎት፣ መድሃኒት እና ክትባት ለእናት እና ለህፃን ያቀርባል። ታካሚ ከነርስ እና ከሐኪም ተከታታይ እንክብካቤ ያገኛል።"
+    },
+    {
+      "id": "am-3",
+      "title": "የመብራት አገልግሎት ማሻሻያ",
+      "language": "am",
+      "source": "የመሠረተ ልማት ምሳሌ",
+      "text": "ከተማዋ የመብራት አገልግሎትን አስፋፋች። አዲስ የኃይል መስመሮች ቤቶች እና ሱቆች ውስጥ መብራት አሻሻሉ። የጥገና ቡድኑ አውታረ መስመሩን ከገበያ አካባቢ ጋር አገናኘ።"
+    },
+    {
+      "id": "am-4",
+      "title": "መንገድ እና ድልድይ ልማት",
+      "language": "am",
+      "source": "የትራንስፖርት ምሳሌ",
+      "text": "መንግስት መንገድ እና ድልድይ ጠገነ። ይህ ገበያ ከአቅራቢያ መንደር እና የትራንስፖርት መስመር ጋር አገናኘ። ፕሮጀክት የጉዞ ጊዜ ቀነሰ።"
+    },
+    {
+      "id": "am-5",
+      "title": "ግብርና እና መስኖ ድጋፍ",
+      "language": "am",
+      "source": "የግብርና ምሳሌ",
+      "text": "ገበሬ መስኖ እና የተሻሻለ ዘር ተጠቅሞ የሰብል መከር አሳደገ። የግብርና ቢሮ ለአፈር እና ለማከማቻ ስልጠና ሰጠ።"
+    }
+    ,
+    {
+      "id": "en-6",
+      "title": "Kingdom of Aksum",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The Kingdom of Aksum was one of the greatest ancient civilizations in East Africa. It became an important trading center connecting Africa, Arabia, and the Roman Empire."
+    },
+    {
+      "id": "en-7",
+      "title": "Battle of Adwa (1896)",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The Battle of Adwa in 1896 was a major victory for Ethiopia against Italian colonial forces. Emperor Menelik II led Ethiopian troops during the battle."
+    },
+    {
+      "id": "en-8",
+      "title": "Lalibela rock-hewn churches",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The rock-hewn churches of Lalibela were built during the reign of King Lalibela in the 12th century and remain important pilgrimage sites today."
+    },
+    {
+      "id": "en-9",
+      "title": "Haile Selassie reforms",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "Emperor Haile Selassie introduced modernization reforms in education, transportation, and international diplomacy during the twentieth century."
+    },
+    {
+      "id": "en-10",
+      "title": "Ancient city of Harar",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The ancient city of Harar is known for its Islamic scholarship, traditional houses, and historic walls called Jugol."
+    },
+    {
+      "id": "en-11",
+      "title": "Traditional manuscripts in Ge'ez",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "Traditional Ethiopian manuscripts were written in Ge’ez and preserved in monasteries for centuries."
+    },
+    {
+      "id": "en-12",
+      "title": "Gondarine period",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The Gondarine period was famous for castle architecture and artistic development in northern Ethiopia."
+    },
+    {
+      "id": "en-13",
+      "title": "Timket celebration",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "Timket is an Ethiopian Orthodox celebration commemorating the baptism of Jesus Christ and is celebrated with colorful ceremonies."
+    },
+    {
+      "id": "en-14",
+      "title": "Ethiopian calendar",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "The Ethiopian calendar has thirteen months and differs from the Gregorian calendar used in many countries."
+    },
+    {
+      "id": "en-15",
+      "title": "Lucy fossil discovery",
+      "language": "en",
+      "source": "Imported dataset",
+      "text": "Lucy, one of the oldest discovered human fossils, was found in Ethiopia in 1974 and helped scientists study human evolution."
+    },
+    {
+      "id": "am-6",
+      "title": "የአክሱም መንግስት",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "የአክሱም መንግስት በምስራቅ አፍሪካ ከነበሩ ታላላቅ ሥልጣኔዎች አንዱ ነበር። አክሱም የንግድ ማዕከል ሆኖ ይታወቅ ነበር።"
+    },
+    {
+      "id": "am-7",
+      "title": "የአድዋ ጦርነት",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "የአድዋ ጦርነት በ1896 ዓ.ም ኢትዮጵያ በጣሊያን ቅኝ ገዢዎች ላይ ያገኘችው ታላቅ ድል ነበር።"
+    },
+    {
+      "id": "am-8",
+      "title": "የላሊበላ ቤተክርስቲያናት",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "የላሊበላ ድንጋይ ቤተክርስቲያናት በ12ኛው ክፍለ ዘመን በንጉስ ላሊበላ ዘመን ተገንብተዋል።"
+    },
+    {
+      "id": "am-9",
+      "title": "ኃይለ ሥላሴ ለውጦች",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "ንጉስ ኃይለ ሥላሴ በትምህርት፣ በትራንስፖርት እና በውጭ ግንኙነት ዘርፍ ዘመናዊ ለውጦችን አስገብተዋል።"
+    },
+    {
+      "id": "am-10",
+      "title": "ሐረር ከተማ",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "ሐረር በእስልምና ትምህርት፣ በባህላዊ ቤቶች እና በጁጎል ቅጥር የሚታወቅ ታሪካዊ ከተማ ናት።"
+    },
+    {
+      "id": "am-11",
+      "title": "ባህላዊ መጻሕፍት",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "ባህላዊ የኢትዮጵያ መጻሕፍት በግዕዝ ቋንቋ ተጽፈው በገዳማት ውስጥ ለብዙ ዘመናት ተጠብቀዋል።"
+    },
+    {
+      "id": "am-12",
+      "title": "የጎንደር ዘመን",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "የጎንደር ዘመን በቤተመንግስት ህንፃዎች እና በስነጥበብ እድገት የታወቀ ነበር።"
+    },
+    {
+      "id": "am-13",
+      "title": "ጥምቀት በኢትዮጵያ",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "ጥምቀት የኢትዮጵያ ኦርቶዶክስ በዓል ሲሆን የኢየሱስን ጥምቀት ያስታውሳል።"
+    },
+    {
+      "id": "am-14",
+      "title": "የዘመን አቆጣጠር",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "የኢትዮጵያ ዘመን አቆጣጠር አስራ ሶስት ወራት አሉት እና ከግሪጎሪያን ቀን መቁጠሪያ ይለያል።"
+    },
+    {
+      "id": "am-15",
+      "title": "ሉሲ እና ሰው አጥንት",
+      "language": "am",
+      "source": "Imported dataset",
+      "text": "ሉሲ በ1974 በኢትዮጵያ የተገኘች ከጥንታዊ የሰው አጥንት ግኝቶች አንዷ ናት።"
+    }
+  ]
+}

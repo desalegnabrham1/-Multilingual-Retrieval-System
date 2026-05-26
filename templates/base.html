@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title or "Multilingual IR System" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body class="{{ body_class or '' }}">
+    <header class="site-header">
+      <div class="header-left">
+        {% if body_class != 'home-page' %}
+          <button class="back-button" id="backBtn" aria-label="Go back" title="Back">
+            <span class="back-arrow">← Back</span>
+          </button>
+        {% else %}
+          <a class="brand" href="{{ url_for('index') }}" aria-label="Multilingual IR System home" title="Multilingual IR System">
+            <span class="brand-mark">
+              <span class="brand-blue">M</span>
+              <span class="brand-red">I</span>
+              <span class="brand-yellow">R</span>
+              <span class="brand-green">S</span>
+            </span>
+          </a>
+        {% endif %}
+      </div>
+      <nav class="site-nav">
+        <a href="{{ url_for('index') }}" class="nav-link">🏠 Home</a>
+        <a href="{{ url_for('dataset') }}" class="nav-link">📊 Dataset</a>
+        <a href="{{ url_for('evaluation') }}" class="nav-link">📈 Evaluation</a>
+        <button class="search-toggle" id="searchToggle" aria-label="Toggle search" title="Search">
+          <span class="search-icon">🔍</span>
+        </button>
+      </nav>
+    </header>
+    <div class="search-modal" id="searchModal" style="display: none;">
+      <div class="search-modal-content">
+        <form method="POST" action="{{ url_for('search') }}" class="quick-search-form">
+          <input type="text" name="query" placeholder="Search..." class="quick-search-input" autofocus>
+          <button type="submit" class="quick-search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+    <main class="page-shell">
+      {% block content %}{% endblock %}
+    </main>
+    <script>
+      // Back button handler
+      const backBtn = document.getElementById('backBtn');
+      if (backBtn) {
+        backBtn.addEventListener('click', function() {
+          window.history.back();
+        });
+      }
+
+      // Search toggle
+      document.getElementById('searchToggle').addEventListener('click', function() {
+        const modal = document.getElementById('searchModal');
+        const isHidden = modal.style.display === 'none';
+        modal.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) {
+          document.querySelector('.quick-search-input').focus();
+        }
+      });
+      document.getElementById('searchModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.style.display = 'none';
+        }
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.getElementById('searchModal').style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

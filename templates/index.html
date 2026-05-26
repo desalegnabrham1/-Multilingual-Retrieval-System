@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="landing-shell">
+  <div class="landing-copy">
+    <div class="home-logo" aria-label="Multilingual IR System">
+      <span class="brand-blue">M</span>
+      <span class="brand-red">I</span>
+      <span class="brand-yellow">R</span>
+      <span class="brand-green">S</span>
+    </div>
+    <p class="landing-subtitle landing-subtitle-tight">
+      Search English or Amharic. Get local matches, bilingual expansion, and Google fallback when needed.
+    </p>
+  </div>
+
+  <form class="search-panel" action="{{ url_for('search') }}" method="post">
+    <label class="sr-only" for="query">Search query</label>
+    <div class="search-bar">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="query" name="query" type="text" placeholder="Type an English or Amharic query" list="query-suggestions" required />
+      <button type="submit">Search</button>
+    </div>
+
+    <datalist id="query-suggestions">
+      {% for query in example_queries %}
+        <option value="{{ query }}"></option>
+      {% endfor %}
+    </datalist>
+    <div class="example-row" aria-label="Example searches">
+      {% for query in example_queries %}
+        <button class="example-chip" type="button" data-query="{{ query }}">
+          {{ query }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <details class="advanced-panel">
+      <summary>Search options</summary>
+      <div class="control-row">
+        <label>
+          Query language
+          <select name="language">
+            <option value="auto" selected>Auto detect</option>
+            <option value="en">English</option>
+            <option value="am">Amharic</option>
+          </select>
+        </label>
+        <label>
+          Ranking
+          <select name="ranking">
+            <option value="bm25" selected>BM25</option>
+            <option value="tfidf">TF-IDF</option>
+          </select>
+        </label>
+        <label>
+          Results
+          <select name="top_k">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="checkbox-row">
+        <input type="checkbox" name="expand_query" checked />
+        Enable query expansion for cross-language matching
+      </label>
+
+      <label class="checkbox-row">
+        <input type="checkbox" name="web_search" checked />
+        Use Google web fallback when local documents do not match
+      </label>
+    </details>
+
+    <div class="history-row" aria-live="polite" hidden>
+      <span class="history-label">Recent searches</span>
+      <div class="history-chips"></div>
+      <button class="text-button" type="button" id="clear-history">Clear</button>
+    </div>
+    <div class="support-line">
+      <a href="{{ url_for('evaluation') }}">Evaluation metrics</a>
+    </div>
+  </form>
+
+  <script>
+    const searchForm = document.querySelector('.search-panel');
+    const queryInput = document.querySelector('#query');
+    const historyRow = document.querySelector('.history-row');
+    const historyChips = document.querySelector('.history-chips');
+    const clearHistoryButton = document.querySelector('#clear-history');
+    const historyKey = 'mirs_recent_searches';
+
+    function renderHistory() {
+      const items = JSON.parse(localStorage.getItem(historyKey) || '[]');
+      historyChips.innerHTML = '';
+      if (!items.length) {
+        historyRow.hidden = true;
+        return;
+      }
+
+      historyRow.hidden = false;
+      items.slice(0, 5).forEach((item) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'example-chip history-chip';
+        button.textContent = item;
+        button.addEventListener('click', () => {
+          queryInput.value = item;
+          searchForm.requestSubmit();
+        });
+        historyChips.appendChild(button);
+      });
+    }
+
+    function storeHistory(value) {
+      if (!value.trim()) {
+        return;
+      }
+
+      const items = JSON.parse(localStorage.getItem(historyKey) || '[]');
+      const nextItems = [value, ...items.filter((item) => item !== value)].slice(0, 5);
+      localStorage.setItem(historyKey, JSON.stringify(nextItems));
+    }
+
+    document.querySelectorAll('.example-chip').forEach((button) => {
+      button.addEventListener('click', () => {
+        queryInput.value = button.dataset.query || '';
+        searchForm.requestSubmit();
+      });
+    });
+
+    searchForm.addEventListener('submit', () => storeHistory(queryInput.value));
+
+    clearHistoryButton.addEventListener('click', () => {
+      localStorage.removeItem(historyKey);
+      renderHistory();
+    });
+
+    renderHistory();
+  </script>
+</section>
+{% endblock %}

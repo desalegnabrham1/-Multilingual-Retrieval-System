@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="results-hero">
+  <div>
+    <form class="results-search" action="{{ url_for('search') }}" method="post">
+      <input type="hidden" name="language" value="{{ language_choice }}" />
+      <input type="hidden" name="ranking" value="{{ ranking }}" />
+      <input type="hidden" name="top_k" value="{{ top_k }}" />
+      {% if expand_query %}<input type="hidden" name="expand_query" value="on" />{% endif %}
+      {% if web_search %}<input type="hidden" name="web_search" value="on" />{% endif %}
+      <div class="search-bar results-search-bar">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input name="query" type="text" value="{{ query }}" aria-label="Search query" />
+        <button type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+  <div class="results-meta">
+    <span>Detected: {{ detected_language }}</span>
+    <span>Ranking: {{ ranking }}</span>
+    <span>Expansion: {{ "On" if expand_query else "Off" }}</span>
+    <span>Top {{ top_k }}</span>
+  </div>
+</section>
+
+<p class="results-hint">Showing results for “{{ query }}”.</p>
+
+<section class="summary-card card">
+  <div>
+    <h2>Query expansion</h2>
+    <p>Expanded retrieval terms used by the engine for this search.</p>
+  </div>
+  <div class="tag-row compact-tags">
+    {% for term in query_terms[:10] %}
+      <span>{{ term }}</span>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="results-list">
+  {% if results %}
+    <div class="section-label">Local corpus results</div>
+    {% for item in results %}
+      <article class="result-card">
+        <div class="result-topline">
+          <div class="doc-head">
+            <p class="doc-lang">{{ item.doc.language | upper }}</p>
+            <h3>{{ item.doc.title }}</h3>
+            <p class="doc-source">{{ item.doc.source }}</p>
+          </div>
+          <div class="score-badge">{{ "%.3f" | format(item.score) }}</div>
+        </div>
+        <p class="snippet">{{ item.snippet }}</p>
+        <div class="tag-row">
+          {% for term in item.matched_terms[:6] %}
+            <span>{{ term }}</span>
+          {% endfor %}
+        </div>
+        <div class="source-row">
+          <span>ID: {{ item.doc.doc_id }}</span>
+          <span>Language: {{ item.doc.language | upper }}</span>
+        </div>
+      </article>
+    {% endfor %}
+  {% endif %}
+</section>
+
+{% if fallback_results and not results %}
+<section class="results-list">
+  <div class="section-label">Approximate local matches</div>
+  {% for item in fallback_results %}
+    <article class="result-card">
+      <div class="result-topline">
+        <div class="doc-head">
+          <p class="doc-lang">{{ item.doc.language | upper }}</p>
+          <h3>{{ item.doc.title }}</h3>
+          <p class="doc-source">{{ item.doc.source }}</p>
+        </div>
+        <div class="score-badge">{{ "%.3f" | format(item.score) }}</div>
+      </div>
+      <p class="snippet">{{ item.snippet }}</p>
+      <div class="source-row">
+        <span>ID: {{ item.doc.doc_id }}</span>
+        <span>Fuzzy match</span>
+      </div>
+    </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if web_results %}
+<section class="results-list">
+  <div class="section-label">Google web results</div>
+  {% for item in web_results %}
+    <article class="result-card web-card">
+      <div class="result-topline">
+        <div class="doc-head">
+          <p class="doc-lang">WEB</p>
+          <h3><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></h3>
+          <p class="doc-source">{{ item.display_link or item.source }}</p>
+        </div>
+      </div>
+      <p class="snippet">{{ item.snippet }}</p>
+      <div class="source-row">
+        <span>Source: Google</span>
+      </div>
+    </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if not results and not fallback_results and not web_results %}
+  <article class="empty-state card">
+    <h3>No results yet</h3>
+    <p>Try a broader query, enable the Google fallback, or search using terms from the corpus topics.</p>
+  </article>
+{% endif %}
+{% endblock %}

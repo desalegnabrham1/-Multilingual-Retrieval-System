@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q1",
+    "query": "Kingdom of Aksum was one of the greatest ancient civilizations in East Africa",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q2",
+    "query": "The Battle of Adwa in 1896 was a major victory for Ethiopia",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q3",
+    "query": "The rock-hewn churches of Lalibela were built during the reign of King Lalibela",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q4",
+    "query": "Emperor Haile Selassie introduced modernization reforms in education, transportation, and international diplomacy",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q5",
+    "query": "The ancient city of Harar is known for its Islamic scholarship and historic walls Jugol",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q6",
+    "query": "Traditional Ethiopian manuscripts were written in Ge’ez and preserved in monasteries",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q7",
+    "query": "The Gondarine period was famous for castle architecture and artistic development",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q8",
+    "query": "Timket is an Ethiopian Orthodox celebration commemorating the baptism of Jesus Christ",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q9",
+    "query": "The Ethiopian calendar has thirteen months and differs from the Gregorian calendar",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q10",
+    "query": "Lucy one of the oldest discovered human fossils was found in Ethiopia in 1974",
+    "language": "en",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q11",
+    "query": "የአክሱም መንግስት በምስራቅ አፍሪካ ከነበሩ ታላላቅ ሥልጣኔዎች አንዱ ነበር",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q12",
+    "query": "የአድዋ ጦርነት በ1896 ዓ.ም ኢትዮጵያ በጣሊያን ቅኝ ገዢዎች ላይ ያገኘችው ታላቅ ድል",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q13",
+    "query": "የላሊበላ ድንጋይ ቤተክርስቲያናት በ12ኛው ክፍለ ዘመን ተገንብተዋል",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q14",
+    "query": "ንጉስ ኃይለ ሥላሴ በትምህርት በትራንስፖርት እና በውጭ ግንኙነት ዘርፍ ዘመናዊ ለውጦችን አስገብተዋል",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q15",
+    "query": "ሐረር በእስልምና ትምህርት በባህላዊ ቤቶች እና በጁጎል ቅጥር የሚታወቅ ታሪካዊ ከተማ",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q16",
+    "query": "ባህላዊ የኢትዮጵያ መጻሕፍት በግዕዝ ቋንቋ ተጽፈው በገዳማት ውስጥ ለብዙ ዘመናት ተጠብቀዋል",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q17",
+    "query": "የጎንደር ዘመን በቤተመንግስት ህንፃዎች እና በስነጥበብ እድገት የታወቀ ነበር",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q18",
+    "query": "ጥምቀት የኢትዮጵያ ኦርቶዶክስ በዓል ሲሆን የኢየሱስን ጥምቀት ያስታውሳል",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q19",
+    "query": "የኢትዮጵያ ዘመን አቆጣጠር አስራ ሶስት ወራት አሉት",
+    "language": "am",
+    "ranking": "bm25"
+  },
+  {
+    "id": "q20",
+    "query": "ሉሲ በ1974 በኢትዮጵያ የተገኘች ከጥንታዊ የሰው አጥንት ግኝቶች አንዷ ናት",
+    "language": "am",
+    "ranking": "bm25"
+  }
+]
